@@ -39,5 +39,23 @@ int main()
         printf("You're offline"); // Runs if isOnline is false
     }
 
+    printf("--------------------\n");
+    printf("--------------------\n");
+    printf("--------------------\n");
+    printf("--------------------\n");
+    printf("--------------------\n");
+    printf("--------------------\n");
+
+    // setting width
+    int num1 = 1;
+    int num2 = 101;
+    int num3 = 10001;
+    int num4 = 1000001;
+
+    printf("%8d\n", num1);
+    printf("%9d\n", num2);
+    printf("%10d\n", num3);
+    printf("%11d\n", num4);
+
     return 0; // Indicates successful termination to the OS
 }
