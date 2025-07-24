@@ -6,7 +6,6 @@
 
 int main()
 {
-
     int n, x, res = 0;
 
     scanf("%d %d", &n, &x);
