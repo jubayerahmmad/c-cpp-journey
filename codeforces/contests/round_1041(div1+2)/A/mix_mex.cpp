@@ -31,27 +31,49 @@ int getMin(int arr[4])
     return min;
 }
 
-int getMex(int arr[4])
+int getMex(int arr[3])
 {
-
-    bool exists[4] = {false};
-
-    for (int i = 0; i < 3; i++)
-    {
-        if (arr[i] >= 0 && arr[i] <= 3)
-        {
-            exists[arr[i]] = true;
-        }
-    }
+    sort(arr, arr + 3);
 
     for (int i = 0; i <= 3; i++)
     {
-        if (!exists[i])
+        bool found = false;
+        for (int j = 0; j < 3; j++)
+        {
+            if (arr[j] == i)
+            {
+                found = true;
+                break;
+            }
+        }
+        if (!found)
             return i;
     }
 
     return 4;
 }
+
+// int getMex(int arr[4])
+// {
+
+//     bool exists[4] = {false};
+
+//     for (int i = 0; i < 3; i++)
+//     {
+//         if (arr[i] >= 0 && arr[i] <= 3)
+//         {
+//             exists[arr[i]] = true;
+//         }
+//     }
+
+//     for (int i = 0; i <= 3; i++)
+//     {
+//         if (!exists[i])
+//             return i;
+//     }
+
+//     return 4;
+// }
 
 int main()
 {
